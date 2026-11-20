@@ -1,0 +1,80 @@
+{
+  "model_version": "1.0.0",
+  "data_mode": "official",
+  "n_rows": 1000,
+  "split": {
+    "train": 750,
+    "test": 250,
+    "seed": 42
+  },
+  "selected_model": "logistic_regression",
+  "metrics": {
+    "baseline_prior": {
+      "accuracy": 0.712,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5
+    },
+    "logistic_regression": {
+      "accuracy": 0.78,
+      "balanced_accuracy": 0.74625,
+      "precision": 0.60759,
+      "recall": 0.66667,
+      "f1": 0.63576,
+      "roc_auc": 0.76568
+    },
+    "random_forest": {
+      "accuracy": 0.78,
+      "balanced_accuracy": 0.7049,
+      "precision": 0.64407,
+      "recall": 0.52778,
+      "f1": 0.58015,
+      "roc_auc": 0.74025
+    }
+  },
+  "test_by_country": {
+    "singapore": {
+      "accuracy": 0.60759,
+      "balanced_accuracy": 0.5,
+      "precision": 0.60759,
+      "recall": 1.0,
+      "f1": 0.75591,
+      "roc_auc": 0.5504,
+      "n_test": 79
+    },
+    "united_states": {
+      "accuracy": 0.85965,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.54932,
+      "n_test": 171
+    }
+  },
+  "model_inputs": [
+    "country",
+    "age",
+    "subscriber_type",
+    "num_streams"
+  ],
+  "note": "Results based on supplied AAVAIL training dataset; observational evaluation only",
+  "market_summary": [
+    {
+      "country": "singapore",
+      "n_customers": 300,
+      "churned": 181,
+      "churn_rate": 0.60333,
+      "mean_streams": 15.0367
+    },
+    {
+      "country": "united_states",
+      "n_customers": 700,
+      "churned": 108,
+      "churn_rate": 0.15429,
+      "mean_streams": 18.8343
+    }
+  ]
+}
